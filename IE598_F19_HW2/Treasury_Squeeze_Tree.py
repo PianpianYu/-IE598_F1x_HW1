@@ -107,7 +107,7 @@ print (forest.predict([[1, 0, 0, 0, 1, 1, 1, 0, 0]]))
 y_train_pred_forest = forest.predict(x_train)
 y_pred_forest = forest.predict(x_test)
 print(metrics.accuracy_score(y_train, y_train_pred_forest), metrics.accuracy_score(y_test, y_pred_forest))
-#0.8488888888888889 0.5822222222222222  
+#0.6696296296296296 0.6888888888888889   
 
 print("My name is Pianpian Yu")
 print("My NetID is: py7")
