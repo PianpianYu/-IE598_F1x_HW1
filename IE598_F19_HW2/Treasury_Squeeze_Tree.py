@@ -94,6 +94,7 @@ plt.show()
 #use RandomForestClassifier to reduce overfitting in the desicion tree model because of so many features
 from sklearn.ensemble import RandomForestClassifier
 forest = RandomForestClassifier(criterion='gini',
+                                max_depth = 4,
                                 n_estimators=25,
                                 random_state=1,
                                 n_jobs=2)         #default 9^(1/2) features
