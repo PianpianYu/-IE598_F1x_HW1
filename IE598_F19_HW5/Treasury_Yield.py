@@ -184,6 +184,6 @@ print('Transformed SVR RMSE train: %.3f, test: %.3f' % (
        math.sqrt(mean_squared_error(y_train, y_train_pred)),
        math.sqrt(mean_squared_error(y_test, y_test_pred))))
 
-print("My name is {type your name here}")
-print("My NetID is: {type your NetID here}")
+print("My name is Pianpian Yu")
+print("My NetID is: py7")
 print("I hereby certify that I have read the University policy on Academic Integrity and that I am not in violation.")
