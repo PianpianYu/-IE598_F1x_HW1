@@ -22,7 +22,7 @@ from sklearn import metrics
 tree = DecisionTreeClassifier(criterion = 'gini', max_depth = 4, random_state = 1)
 start_time = time.time()
 for i in range(10):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state = i+1)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, stratify=y, random_state = i+1)
     tree.fit(X_train, y_train)
     y_train_pred = tree.predict(X_train)
     y_test_pred= tree.predict(X_test)
@@ -44,7 +44,7 @@ from sklearn.model_selection import cross_val_score
 dt = DecisionTreeClassifier(criterion = 'gini', max_depth = 4,random_state = 1)
 
 #from the first part, the optimal random_state is 3 for out-of-samples
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state = 3)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, stratify=y, random_state = 3)
 start_time = time.time()
 scores = cross_val_score(estimator=dt, X=X_train, y=y_train, cv=10, n_jobs=-1)
 end_time = time.time()
